@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 88vh;
+    width: 100vw;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.btn {
+    position: relative;
+
+    background: #120909;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    border-radius: 12px;
+    width: 200px;
+    padding: 3px;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    
+    background: conic-gradient(from var(--angle), rgb(255, 251, 0), rgb(0, 119, 255), #00d9ff, rgb(255, 251, 0));
+    opacity: 0;
+    transition: .3s ease;
+    inset: 0;
+    animation: rotate 2s linear infinite;
+}
+.text {
+    position: relative;
+    text-align: center;
+
+    background: #000;
+    color: #e8e8e8;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    z-index: 1;
+}
+.btn:hover::before {
+    opacity: 1;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}

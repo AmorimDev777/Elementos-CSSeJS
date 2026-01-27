@@ -1,0 +1,140 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 88vh;
+}
+.contMenuBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: content-box;
+    background: #222327;
+    border-radius: 40px;
+    width: 400px;
+    height: 70px;
+    padding: 35px;
+}
+.menuBox{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+
+    background: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background: white;
+    cursor: pointer;
+    border: none;
+    transition: .2s ease-in-out;
+    height: 90px;
+    width: 90px;
+    border-radius: 50rem;
+    padding: 25px;
+    z-index: 3;
+}
+#symbol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+    background-color: white;
+    color: #222327;
+    transition: .3s ease-in-out;
+    border-radius: 50rem;
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+#symbol:hover{
+    background: rgb(228, 228, 228);
+}
+span::after{
+    content: '';
+    position: absolute;
+    
+    background: conic-gradient(rgb(255, 251, 0), rgb(0, 119, 255), #00d9ff, rgb(255, 251, 0));
+    height: 40px;
+    width: 40px;
+    border-radius: 50rem;
+    filter: blur(7px);
+}
+#symbol:hover ~ span::after{
+    height: 90px;
+    width: 90px;
+    transition: .3s ease-out;
+}
+.option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    background: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50rem;
+    z-index: -1;
+    transition: .5s ease-out;
+}
+.option:hover{
+    background: rgb(221, 221, 221);
+    width: 40px;
+    height: 40px;
+    transition: .2s ease-out;
+}
+.option:hover:nth-child(3),
+.option:hover:nth-child(4){
+    box-shadow: 0 0 10px rgb(255, 251, 0);
+}
+.option:hover:nth-child(5),
+.option:hover:nth-child(6){
+    box-shadow: 0 0 10px rgb(37, 139, 255);
+}
+.option:active{
+    width: 30px;
+    height: 30px;
+}
+.option:active i{
+    font-size: 14px;
+}
+.option i{
+    color: #222327;
+    transition: .2s ease-out;
+    font-size: 18px;
+}
+span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+    background: #222327;
+    height: 0px;
+    width: 0px;
+    border-radius: 50rem;
+    transition: .3s ease-out;
+}
+.btnActive{
+}
+.btnActive span{
+    height: 120px;
+    width: 120px;
+}
+.btnActive span::after{
+    height: 90px;
+    width: 90px;
+}

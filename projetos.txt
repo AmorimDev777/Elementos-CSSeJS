@@ -1,0 +1,99 @@
+*To-Do List (Lista de Tarefas)
+
+Adicionar, remover e marcar tarefas como concluídas
+
+Salvar no localStorage
+
+Filtros: todas, concluídas, pendentes
+
+*Calculadora
+
+Operações básicas (+ − × ÷)
+
+Layout responsivo
+
+Suporte a teclado
+
+*Relógio Digital / Cronômetro
+
+Relógio em tempo real
+
+Cronômetro com start/pause/reset
+
+Animações em CSS
+
+*Jogo da Velha (Tic-Tac-Toe)
+
+Dois jogadores
+
+Verificação de vencedor
+
+Botão de reset
+
+*Quiz Interativo
+
+Perguntas com múltipla escolha
+
+Pontuação final
+
+Feedback de respostas corretas/erradas
+
+*Gerador de Senhas
+
+Escolher tamanho da senha
+
+Opções: letras, números, símbolos
+
+Botão de copiar
+
+*Consumo de API (Clima, Filmes, etc.)
+
+Buscar dados de uma API pública
+
+Exibir resultados dinamicamente
+
+Tratamento de erro (cidade não encontrada, por exemplo)
+
+*Página de Login (Fake, só front-end)
+
+Validação de formulário
+
+Mensagens de erro
+
+Animações nos inputs
+
+*Galeria de Imagens com Filtro
+
+Filtros por categoria
+
+Modal para ampliar imagem
+
+Transições suaves
+
+*Jogo Simples (Adivinhação ou Pedra-Papel-Tesoura)
+
+Lógica de jogo em JS
+
+Contador de pontos
+
+Interface amigável
+
+
+
+
+            <a href="">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-user"></i>
+                <p>Perfil</p>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-bell"></i>
+                <p>Notificações</p>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-gear"></i>
+                <p>Cofigurações</p>
+            </a>

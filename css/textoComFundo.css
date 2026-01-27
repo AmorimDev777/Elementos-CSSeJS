@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    min-height: 88vh;
+}
+.texto-imagem {
+  font-size: 120px;
+  font-weight: 900;
+  font-family: Arial, sans-serif;
+
+  background-image: url("../images/imagemBorrada/neymar.png");
+  background-size: cover;
+  background-position: center;
+
+  /* RECORTE NO TEXTO */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  /* contorno branco no texto */
+   -webkit-text-stroke: 4px #ffffff;
+}

@@ -1,0 +1,126 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 88vh;
+}
+.listaContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background: rgb(20, 20, 20);
+    box-shadow: 0 0 15px black inset;
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+}
+.listaContainer::before{
+    content: '';
+    position: absolute;
+
+    background: linear-gradient(-45deg, #eeff00, #4099ff);
+    height: 100%;
+    width: 100%;
+    border-radius: 24px;
+    padding: 39px;
+    z-index: -2;
+}
+.listaContainer::after{
+    content: '';
+    position: absolute;
+    
+    background: rgb(34, 34, 34);
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 35px;
+    z-index: -1;
+}
+.lista{
+    position: absolute;
+    
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.titulo{
+    text-align: center;
+    margin: 10px;
+}
+.boxAdd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.boxAdd::before{
+    content: '';
+    position: absolute;
+
+    background: linear-gradient(45deg, #eeff00, #4099ff);
+    filter: blur(0);
+    height: 100%;
+    width: 261px;
+    border-radius: 10px;
+    z-index: 0;
+    transition: filter 0.3s;
+}
+.boxAdd input{
+    background: rgb(20, 20, 20);
+    border: solid 2px gainsboro;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 2;
+}
+.boxAdd.focused::before{
+    filter: blur(5px);
+}
+.boxAdd button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background: rgb(20, 20, 20);
+    cursor: pointer;
+    border: solid 2px gainsboro;
+    height: 44px;
+    width: 44px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.boxAdd i{
+    color: white;
+    font-size: 18px;
+    z-index: 2;
+}
+.boxAdd button::before{
+    content: '';
+    position: absolute;
+    
+    background: gainsboro;
+    height: 0;
+    width: 0;
+}
+.boxAdd button:hover::before{
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    transition: .3s;
+}
+.boxAdd button:hover i{
+    color: black;
+    transition: .3s;
+}
+.lista ul{
+    overflow: auto;
+    overflow-wrap: break-word;
+    padding-left: 20px;
+    width: 300px;
+    height: 290px;
+}

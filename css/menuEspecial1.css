@@ -1,0 +1,128 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 88vh;
+}
+.icon, .text {
+    color: #222327;
+}
+.icon i{
+    color: #222327;
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    width: 400px;
+    height: 70px;
+}
+.navigation::before{
+    content: '';
+    position: absolute;
+    
+    background: #222327;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    z-index: -1;
+    padding: 10px;
+}
+ul{
+    display: flex;
+    
+    list-style: none;
+    padding: 0;
+}
+li{
+    position: relative;
+    
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    
+    text-decoration: none;
+    width: 100%;
+    font-weight: 500;
+}
+a .icon{
+    display: block;
+    position: relative;
+    text-align: center;
+
+    font-size: 1.5em;
+    line-height: 75px;
+    transition: 0.5s;
+}
+li.active a .icon{
+    transform: translateY(-35px);
+}
+a .text{
+    position: absolute;
+    
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+li.active a .text{
+    opacity: 1;
+    transform: translateY(10px);
+}
+.indicator{
+    position: absolute;
+
+    background: #4099ff;
+    box-sizing: border-box;
+    border: solid 6px #222327;
+    border-radius: 50%;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    transition: 0.5s;
+}
+.indicator::before,
+.indicator::after{
+    content: '';
+    position: absolute;
+
+    background: transparent;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+}
+.indicator::before{
+    left: -22px;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 #222327;
+}
+.indicator::after{
+    right: -22px;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 #222327;
+}
+li.active ~ .indicator{
+    --x: 0;
+    transform: translateX(var(--x));
+}
+li:nth-child(2).active ~ .indicator{ --x: 70px; }
+li:nth-child(3).active ~ .indicator{ --x: 140px; }
+li:nth-child(4).active ~ .indicator{ --x: 210px; }
+li:nth-child(5).active ~ .indicator{ --x: 280px; }

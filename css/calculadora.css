@@ -1,0 +1,160 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 88vh;
+}
+.boxCalculadora{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background: rgb(83, 83, 83);
+    box-shadow: 0 0 25px rgb(0, 0, 0) inset;
+    width: 320px;
+    height: 460px;
+    border-radius: 25px;
+}
+.boxCalculadora::before{
+    content: '';
+    position: absolute;
+    
+    background: linear-gradient(to bottom, rgb(24, 24, 24), rgb(37, 37, 37));
+    box-shadow: 0 0 25px black;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 40px;
+    z-index: -1;
+}
+.calculadora{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    padding: 10px;
+    gap: 10px;
+}
+.tela{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+
+    background: black;
+    padding: 10px;
+    width: 100%;
+    height: 130px;
+    font-size: 20px;
+    border-radius: 18px 18px 10px 10px;
+}
+.tela::before{
+    content: '';
+    position: absolute;
+
+    background: transparent;
+    left: 0;
+    border-left: solid 10px rgb(0, 0, 0);
+    height: 100%;
+    width: 80%;
+}
+.boxBtns{
+    display: grid;
+    grid-template-areas: 
+        'b1 b2 b3 adicionar'
+        'b4 b5 b6 subtrair'
+        'b7 b8 b9 multiplicar'
+        'quociente b0 potencia dividir'
+        'apagarTd apagar igual igual'
+    ;
+
+    width: 100%;
+    height: 100%;
+    gap: 12px;
+}
+.boxBtns button{
+    background: rgb(43, 43, 43);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.boxBtns button:hover{
+    opacity: 0.6;
+    transition: .3s;
+}
+.boxBtns button:nth-child(1){
+    grid-area: b1;
+}
+.boxBtns button:nth-child(2){
+    grid-area: b2;
+}
+.boxBtns button:nth-child(3){
+    grid-area: b3;
+}
+.boxBtns button:nth-child(4){
+    grid-area: b4;
+}
+.boxBtns button:nth-child(5){
+    grid-area: b5;
+}
+.boxBtns button:nth-child(6){
+    grid-area: b6;
+}
+.boxBtns button:nth-child(7){
+    grid-area: b7;
+}
+.boxBtns button:nth-child(8){
+    grid-area: b8;
+}
+.boxBtns button:nth-child(9){
+    grid-area: b9;
+}
+.boxBtns button:nth-child(10){
+    grid-area: b0;
+}
+.boxBtns button:nth-child(11){
+    grid-area: adicionar;
+    background: rgb(0, 132, 255);
+}
+.boxBtns button:nth-child(12){
+    grid-area: subtrair;
+    background: rgb(0, 132, 255);
+}
+.boxBtns button:nth-child(13){
+    grid-area: multiplicar;
+    background: rgb(0, 132, 255);
+}
+.boxBtns button:nth-child(14){
+    grid-area: dividir;
+    background: rgb(0, 132, 255);
+}
+.boxBtns button:nth-child(15){
+    grid-area: quociente;
+    background: rgb(0, 132, 255);
+}
+.boxBtns button:nth-child(16){
+    grid-area: potencia;
+    background: rgb(0, 132, 255);
+}
+.boxBtns button:nth-child(17){
+    grid-area: apagarTd;
+    background: rgb(0, 53, 102);
+}
+.boxBtns button:nth-child(18){
+    grid-area: apagar;
+    background: rgb(0, 53, 102);
+}
+.boxBtns button:nth-child(19){
+    grid-area: igual;
+    color: black;
+    background: rgb(251, 255, 0);
+}
