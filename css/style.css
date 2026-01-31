@@ -15,11 +15,20 @@ body{
     background: var(--background-color);
     background-attachment: fixed;
     height: 100vh;
-
+    
+    --gradienteBtn: linear-gradient(to bottom, rgb(0, 34, 255), rgb(0, 255, 255));
     --background-color: linear-gradient(to bottom, #242424, #000a0f);
     --text-color: #ffffff;
     --alt-text-color: #000000;
-
+    
+    --sombra-bola-detalhes: 0 0 50px #0000006e;
+}
+.modoClaro{
+    --gradienteBtn: linear-gradient(to bottom, rgb(255, 67, 99), orange, yellow);
+    --background-color: linear-gradient(to bottom, #c7c7c7, #001d2c);
+    --text-color: #262626;
+    --alt-text-color: #ffffff;
+    
     --sombra-bola-detalhes: 0 0 50px #0000006e;
 }
 
@@ -233,3 +242,79 @@ body{
 }
 
 /* ------------- Erro404 ------------- */
+
+
+/* ------------- Configurações ------------- */
+
+.containerConf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 88vh;
+}
+.containerConf .boxBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background: linear-gradient(to bottom, rgb(169, 169, 169) 60%, rgb(255, 255, 255));
+    padding: 2px;
+    border-radius: 50rem;
+}
+.containerConf .boxBtn::before{
+    content: '';
+    position: absolute;
+    
+    background: white;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    border-radius: 50rem;
+    z-index: -1;
+}
+.containerConf #btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+    background: var(--gradienteBtn);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50rem;
+    width: 100px;
+}
+.containerConf #moon{
+    font-size: 30px;
+    color: rgb(150, 255, 243);
+}
+.containerConf #sun{
+    font-size: 30px;
+    color: rgb(255, 244, 150);
+}
+.containerConf .boxBall{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 60%, rgb(169, 169, 169));
+    padding: 2px;
+    border-radius: 50rem;
+    left: 8px;
+    transition: .1s;
+}
+.containerConf p{
+    background: rgb(255, 255, 255);
+    height: 35px;
+    width: 35px;
+    border-radius: 50rem;
+}
+.ballActive{
+    transform: translateX(50px);
+}
+
+/* ------------- Configurações ------------- */
