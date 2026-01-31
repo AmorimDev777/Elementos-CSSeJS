@@ -6,14 +6,6 @@ Salvar no localStorage
 
 Filtros: todas, concluídas, pendentes
 
-*Calculadora
-
-Operações básicas (+ − × ÷)
-
-Layout responsivo
-
-Suporte a teclado
-
 *Relógio Digital / Cronômetro
 
 Relógio em tempo real
@@ -69,31 +61,3 @@ Filtros por categoria
 Modal para ampliar imagem
 
 Transições suaves
-
-*Jogo Simples (Adivinhação ou Pedra-Papel-Tesoura)
-
-Lógica de jogo em JS
-
-Contador de pontos
-
-Interface amigável
-
-
-
-
-            <a href="">
-                <i class="fa-solid fa-house"></i>
-                <p>Home</p>
-            </a>
-            <a href="">
-                <i class="fa-solid fa-user"></i>
-                <p>Perfil</p>
-            </a>
-            <a href="">
-                <i class="fa-solid fa-bell"></i>
-                <p>Notificações</p>
-            </a>
-            <a href="">
-                <i class="fa-solid fa-gear"></i>
-                <p>Cofigurações</p>
-            </a>

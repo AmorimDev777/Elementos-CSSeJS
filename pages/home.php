@@ -46,6 +46,10 @@
         <p><i class="fa-solid fa-calendar"></i> 25/01/26</p>
     </div>
     <div class="card">
+        <a href="?page=jokempo">Jokempo</a>
+        <p><i class="fa-solid fa-calendar"></i> 31/01/26</p>
+    </div>
+    <div class="card">
         <a href="?page=testes1">Testes 1</a>
         <p><i class="fa-solid fa-calendar"></i> 31/12/25</p>
     </div>
