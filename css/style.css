@@ -31,6 +31,22 @@ body{
     
     --sombra-bola-detalhes: 0 0 50px #0000006e;
 }
+body::-webkit-scrollbar {
+    width: 12px;
+}
+body::-webkit-scrollbar-track {
+    background: rgb(34, 34, 34);
+}
+body::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 50rem;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: rgb(194, 194, 194);
+}
+body::-webkit-scrollbar-corner{
+    background: rgb(34, 34, 34);
+}
 
 /* ------------- Header ------------- */
 

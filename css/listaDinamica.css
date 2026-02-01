@@ -48,6 +48,8 @@
 }
 .titulo{
     text-align: center;
+
+    color: white;
     margin: 10px;
 }
 .boxAdd{
@@ -69,8 +71,9 @@
     transition: filter 0.3s;
 }
 .boxAdd input{
-    background: rgb(20, 20, 20);
+    color: white;
     border: solid 2px gainsboro;
+    background: rgb(20, 20, 20);
     padding: 10px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -123,4 +126,20 @@
     padding-left: 20px;
     width: 300px;
     height: 290px;
+}
+.lista ul::-webkit-scrollbar {
+    width: 12px;
+}
+.lista ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+.lista ul::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 50rem;
+}
+.lista ul::-webkit-scrollbar-thumb:hover {
+    background: rgb(194, 194, 194);
+}
+.lista ul::-webkit-scrollbar-corner{
+    background: rgb(34, 34, 34);
 }

@@ -5,9 +5,12 @@ let card = document.getElementById('cardResultado')
 let boxOptions = document.getElementsByClassName('boxOptions')[0]
 let listHistorico = document.getElementById('listHistorico')
 let options = ['✊', '✋', '✌']
-let p1option;
-let p2option;
-let resultado;
+let p1option
+let p2option
+let resultado
+let vitorias = 0
+let derrotas = 0
+let empates = 0
 
 const jogar = () => {
     if (p1option.length != 1) return
@@ -26,6 +29,7 @@ const jogar = () => {
         card.classList.add('empate')
         card.textContent = 'Você Empatou'
         resultado = 'Empate'
+        empates += 1
         salvarDuelo(resultado)
     }
     else if (p1result === '✊' && p2result === '✌') {
@@ -33,6 +37,7 @@ const jogar = () => {
         card.classList.remove('empate')
         card.textContent = 'Você Ganhou'
         resultado = 'Usuário Venceu'
+        vitorias += 1
         salvarDuelo(resultado)
     }
     else if (p1result === '✌' && p2result === '✊') {
@@ -40,6 +45,7 @@ const jogar = () => {
         card.classList.remove('empate')
         card.textContent = 'Você Perdeu'
         resultado = 'Máquina Venceu'
+        derrotas += 1
         salvarDuelo(resultado)
     }
     else if (p1result === '✋' && p2result === '✊') {
@@ -47,6 +53,7 @@ const jogar = () => {
         card.classList.remove('empate')
         card.textContent = 'Você Ganhou'
         resultado = 'Usuário Venceu'
+        vitorias += 1
         salvarDuelo(resultado)
     }
     else if (p1result === '✊' && p2result === '✋') {
@@ -54,6 +61,7 @@ const jogar = () => {
         card.classList.remove('empate')
         card.textContent = 'Você Perdeu'
         resultado = 'Máquina Venceu'
+        derrotas += 1
         salvarDuelo(resultado)
     }
     else if (p1result === '✌' && p2result === '✋') {
@@ -61,6 +69,7 @@ const jogar = () => {
         card.classList.remove('empate')
         card.textContent = 'Você Ganhou'
         resultado = 'Usuário Venceu'
+        vitorias += 1
         salvarDuelo(resultado)
     }
     else if (p1result === '✋' && p2result === '✌') {
@@ -68,6 +77,7 @@ const jogar = () => {
         card.classList.remove('empate')
         card.textContent = 'Você Perdeu'
         resultado = 'Máquina Venceu'
+        derrotas += 1
         salvarDuelo(resultado)
     }
     adicionarDuelosAoHistorico()
@@ -89,6 +99,21 @@ document.addEventListener('keydown', (event) => {
         jogar()
     }
 })
+document.addEventListener('keydown', (event) => {
+    if (event.key === '1') {
+        chooseSimbol('✊')
+    }
+})
+document.addEventListener('keydown', (event) => {
+    if (event.key === '2') {
+        chooseSimbol('✋')
+    }
+})
+document.addEventListener('keydown', (event) => {
+    if (event.key === '3') {
+        chooseSimbol('✌')
+    }
+})
 
 function salvarDuelo(result) {
     let allDuels = document.querySelectorAll('p.duelo').length + 1
@@ -107,10 +132,31 @@ function adicionarDuelosAoHistorico() {
 
 function deleteAll() {
     if (document.querySelectorAll('p.duelo').length <= 0) {
-        alert('nada')
+        alert('Não há nenhum registro!!!')
     }
     for (let i = 1; i <= document.querySelectorAll('p.duelo').length; i ++) {
         localStorage.removeItem('resultado ' + i)
     }
     listHistorico.innerHTML = ''
+    vitorias = 0
+    derrotas = 0
+    empates = 0
 }
+
+function gerarDados() {
+    alert(vitorias + ' Vitórias || ' + empates + ' Empates || ' + derrotas + ' Derrotas')
+}
+
+function recuperarDuelos() {
+    for (let i = 1; i < localStorage.length; i++) {
+        let resultadoStorage = localStorage.getItem('resultado ' + i)
+        let p = document.createElement('p')
+        p.style.color = 'white'
+        p.style.fontSize = '16px'
+        p.textContent = i + ' - ' + resultadoStorage
+        p.classList.add('duelo')
+        listHistorico.appendChild(p)
+    }
+}
+
+recuperarDuelos() 

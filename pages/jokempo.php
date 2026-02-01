@@ -23,7 +23,10 @@
     </div>
     <div class="boxHistorico">
         <span id="listHistorico"></span>
-        <button class="apagarTd" onclick="deleteAll()">Apagar Tudo</button>
+        <span>
+            <button class="apagarTd" onclick="deleteAll()">Apagar Tudo</button>
+            <button class="gerarDados" onclick="gerarDados()">Gerar Dados</button>
+        </span>
     </div>
 </div>
 
