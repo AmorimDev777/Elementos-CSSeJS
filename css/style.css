@@ -109,7 +109,7 @@ body::-webkit-scrollbar-corner{
     height: 100vh;
     width: 100vw;
     top: 0;
-    z-index: -1;
+    z-index: -999;
 }
 .detalhes .bola{
     position: absolute;

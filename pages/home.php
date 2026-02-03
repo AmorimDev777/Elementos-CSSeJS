@@ -50,6 +50,14 @@
         <p><i class="fa-solid fa-calendar"></i> 31/01/26</p>
     </div>
     <div class="card">
+        <a href="?page=cronometro">Cronômetro</a>
+        <p><i class="fa-solid fa-calendar"></i> 02/02/26</p>
+    </div>
+    <div class="card">
+        <a href="?page=menuCircular">Menu Circular</a>
+        <p><i class="fa-solid fa-calendar"></i> 03/02/26</p>
+    </div>
+    <div class="card">
         <a href="?page=testes1">Testes 1</a>
         <p><i class="fa-solid fa-calendar"></i> 31/12/25</p>
     </div>

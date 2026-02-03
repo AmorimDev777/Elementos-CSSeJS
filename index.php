@@ -16,7 +16,8 @@
 
     $allowedPages = ['home','loginBrilhante','configuracoes','botaoNeon','menuEspecial1'
                     ,'imagemBorrada','menuEspecial2','cacaNiquel','roleta','textoComFundo'
-                    ,'listaDinamica','calculadora','menuLateral','jokempo','testes1','testes2'];
+                    ,'listaDinamica','calculadora','menuLateral','jokempo','cronometro'
+                    ,'menuCircular','testes1','testes2'];
 
     $pagePath = __DIR__ . '/pages/' . $page . '.php';
 
@@ -26,6 +27,6 @@
         include __DIR__ . '/pages/erro.php';
     }
     ?>
-    <script src="/js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
