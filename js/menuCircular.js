@@ -29,3 +29,16 @@ boxBtn.addEventListener('click', () => {
         id = 0
     }
 })
+
+allBtn.forEach(btn => {
+    btn.addEventListener('mouseover', () => {
+        btn.style.opacity = '.6'
+        btn.style.scale = '1.2'
+        btn.style.transition = '.3s'
+    })
+    btn.addEventListener('mouseout', () => {
+        btn.style.opacity = '1'
+        btn.style.scale = '1'
+        btn.style.transition = '.3s'
+    })
+})

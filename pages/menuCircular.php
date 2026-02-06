@@ -3,15 +3,15 @@
 
 <div class="container">
     <div class="boxBtn">
-        <span>btn</span>
-        <button id="btn1">a</button>
-        <button id="btn2">b</button>
-        <button id="btn3">c</button>
-        <button id="btn4">d</button>
-        <button id="btn5">f</button>
-        <button id="btn6">g</button>
-        <button id="btn7">h</button>
-        <button id="btn8">i</button>
+        <span><i class="fa-solid fa-plus"></i></span>
+        <button id="btn1"><i class="fa-solid fa-compact-disc"></i></button>
+        <button id="btn2"><i class="fa-solid fa-headphones"></i></button>
+        <button id="btn3"><i class="fa-solid fa-guitar"></i></button>
+        <button id="btn4"><i class="fa-solid fa-music"></i></button>
+        <button id="btn5"><i class="fa-solid fa-radio"></i></button>
+        <button id="btn6"><i class="fa-solid fa-volume-high"></i></button>
+        <button id="btn7"><i class="fa-solid fa-drum"></i></button>
+        <button id="btn8"><i class="fa-solid fa-microphone"></i></button>
     </div>
 </div>
 

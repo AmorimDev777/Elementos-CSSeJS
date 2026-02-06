@@ -12,21 +12,37 @@
     position: relative;
 
     cursor: pointer;
-    background: blue;
+    background: white;
     border-radius: 50rem;
     padding: 20px;
 }
 .boxBtn span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     pointer-events: none;
+    height: 30px;
+    aspect-ratio: 1/1;
+}
+.boxBtn span i{
+    color: black;
+    font-size: 30px;
+    transition: .3s;
 }
 .boxBtn button{
     position: absolute;
 
-    background: red;
+    background: rgb(180, 180, 180);
+    cursor: pointer;
     border: none;
     border-radius: 50rem;
     width: 50px;
     height: 50px;
     transition: .3s;
     z-index: -1;
+}
+.boxBtn button i{color: black;}
+.boxBtn.active span i{
+    transform: rotate(135deg);
 }
